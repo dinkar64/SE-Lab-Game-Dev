@@ -5,13 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class Mainmenu : MonoBehaviour
 {
-    public void playgame () {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+    public GameObject gamemode;
+    public GameObject menu;
+
+    public void start () {
+        menu.SetActive(false);
+        gamemode.SetActive(true);
+    }
+
+     public void goback () {
+         gamemode.SetActive(false);
+        menu.SetActive(true);
         //SceneManager.LoadScene(2);
     }
 
-    public void goback () {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1 );
+    public void playgamefish () {
+        SceneManager.LoadScene(1);
         //SceneManager.LoadScene(2);
     }
+
+    public void playgamebin () {
+        SceneManager.LoadScene(4);
+        //SceneManager.LoadScene(2);
+    }
+
+    // public void playgame () {
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+    //     //SceneManager.LoadScene(2);
+    // }
+
+    // public void playgame () {
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+    //     //SceneManager.LoadScene(2);
+    // }
+
+   
 }
