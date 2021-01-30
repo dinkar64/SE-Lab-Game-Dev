@@ -39,11 +39,15 @@ public class pause : MonoBehaviour
 
 
     public void quit() {
+        GameIsPaused = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene (2);
     }
 
     public void quitb() {
-        SceneManager.LoadScene (4);
+        GameIsPaused = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene (5);
     }
 
 }

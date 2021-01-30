@@ -7,14 +7,26 @@ public class Mainmenu : MonoBehaviour
 {
     public GameObject gamemode;
     public GameObject menu;
+    public GameObject optionsmenu;
 
     public void start () {
         menu.SetActive(false);
         gamemode.SetActive(true);
     }
 
+    public void openoptions () {
+        menu.SetActive(false);
+        optionsmenu.SetActive(true);
+    }
+
      public void goback () {
-         gamemode.SetActive(false);
+        gamemode.SetActive(false);
+        menu.SetActive(true);
+        //SceneManager.LoadScene(2);
+    }
+
+    public void gobackO () {
+        optionsmenu.SetActive(false);
         menu.SetActive(true);
         //SceneManager.LoadScene(2);
     }

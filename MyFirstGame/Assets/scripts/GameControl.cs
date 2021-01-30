@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class GameControl : MonoBehaviour
     public GameObject EndText;
     public GameObject EndButton;
 
-    public GameObject StartText;
-    public GameObject StartButton;
+    public GameObject menu;
 
     private float maxWidth;
 
@@ -56,8 +56,7 @@ public class GameControl : MonoBehaviour
     }
 
     public void startgame () {
-        StartText.SetActive(false);
-        StartButton.SetActive(false);
+        menu.SetActive(false);
         binController.togglecontrol (true);
         StartCoroutine (Spawn());
 
@@ -87,5 +86,10 @@ public class GameControl : MonoBehaviour
 
     void PrintText () {
         timerText.text = "Time Left: " + Mathf.RoundToInt (remainingTime);
+    }
+
+    public void quit () {
+        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(2);
     }
 }
