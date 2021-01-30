@@ -6,6 +6,8 @@ TagManager:
   tags:
   - plastic
   - paper
+  - waste
+  - Falling Block
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - character
   - 
   - 
   - 
