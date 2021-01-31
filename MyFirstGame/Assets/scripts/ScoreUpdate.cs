@@ -9,11 +9,13 @@ public class ScoreUpdate : MonoBehaviour
     public int wastepoints;
 
     private int score;
+    public Text highscore;
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
+        highscore.text = PlayerPrefs.GetInt("HighScoreBin",0).ToString();
         UpdateValue();
     }
 
@@ -43,5 +45,11 @@ public class ScoreUpdate : MonoBehaviour
     void UpdateValue()
     {
         scoreValue.text = "Score: " + score;
+
+        if(score > PlayerPrefs.GetInt("HighScoreBin",0))
+		{
+			PlayerPrefs.SetInt("HighScoreBin",score);
+			highscore.text = score.ToString();
+		}
     }
 }

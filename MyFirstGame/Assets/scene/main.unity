@@ -514,7 +514,6 @@ MonoBehaviour:
   menu: {fileID: 1632146604}
   remainingTime: 10
   timerText: {fileID: 1783626741}
-  highscore: {fileID: 1587149585}
   binController: {fileID: 1048089462}
 --- !u!4 &206767611
 Transform:
@@ -1913,6 +1912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: {fileID: 1318787862}
   wastepoints: 1
+  highscore: {fileID: 1587149585}
 --- !u!114 &1048089462
 MonoBehaviour:
   m_ObjectHideFlags: 0
