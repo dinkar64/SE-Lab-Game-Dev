@@ -19,6 +19,7 @@ public class GameControl : MonoBehaviour
     public float remainingTime;
 
     public Text timerText;
+    public Text highscore;
 
     public BinController binController;
 
@@ -40,6 +41,7 @@ public class GameControl : MonoBehaviour
         maxWidth = targetWidth.x - paperWidth;
 
         screenHalfSizeWorldUnits = new Vector2 (Camera.main.aspect * Camera.main.orthographicSize, Camera.main.orthographicSize);
+        highscore.text = PlayerPrefs.GetInt("HighScoreBin",0).ToString();
 
         PrintText ();
     }
